@@ -69,7 +69,7 @@
           'target_name': 'chromeos_dbus_bindings_unittest',
           'type': 'executable',
           'dependencies': ['libchromeos-dbus-bindings'],
-          'includes': ['../common-mk/common_test.gypi'],
+          'includes': ['../../common-mk/common_test.gypi'],
           'sources': [
             'testrunner.cc',
             'adaptor_generator_unittest.cc',
