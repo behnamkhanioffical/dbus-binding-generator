@@ -14,6 +14,7 @@
       '-fno-strict-aliasing',
       '-Woverloaded-virtual',
     ],
+    'include_dirs': ['..'],
   },
   'targets': [
     {
