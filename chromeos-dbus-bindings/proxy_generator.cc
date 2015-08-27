@@ -399,6 +399,12 @@ void ProxyGenerator::AddDestructor(const string& class_name,
                                    IndentedText* text) {
   IndentedText block;
   block.AddLine(StringPrintf("~%s() override {", class_name.c_str()));
+  block.PushOffset(kBlockOffset);
+  block.AddLine("bus_->RemoveObjectProxy(");
+  block.AddLineWithOffset(
+      "service_name_, object_path_, base::Bind(&base::DoNothing));",
+      kLineContinuationOffset);
+  block.PopOffset();
   block.AddLine("}");
   text->AddBlock(block);
 }

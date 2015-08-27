@@ -138,6 +138,8 @@ class TestInterfaceProxy final : public TestInterfaceProxyInterface {
   }
 
   ~TestInterfaceProxy() override {
+    bus_->RemoveObjectProxy(
+        service_name_, object_path_, base::Bind(&base::DoNothing));
   }
 
   void RegisterCloserSignalHandler(
@@ -348,6 +350,8 @@ class TestInterface2Proxy final : public TestInterface2ProxyInterface {
   }
 
   ~TestInterface2Proxy() override {
+    bus_->RemoveObjectProxy(
+        service_name_, object_path_, base::Bind(&base::DoNothing));
   }
 
   void ReleaseObjectProxy(const base::Closure& callback) {
@@ -452,6 +456,8 @@ class TestInterfaceProxy final : public TestInterfaceProxyInterface {
   }
 
   ~TestInterfaceProxy() override {
+    bus_->RemoveObjectProxy(
+        service_name_, object_path_, base::Bind(&base::DoNothing));
   }
 
   void RegisterCloserSignalHandler(
@@ -515,6 +521,8 @@ class TestInterface2Proxy final : public TestInterface2ProxyInterface {
   }
 
   ~TestInterface2Proxy() override {
+    bus_->RemoveObjectProxy(
+        service_name_, object_path_, base::Bind(&base::DoNothing));
   }
 
   void ReleaseObjectProxy(const base::Closure& callback) {
@@ -621,6 +629,8 @@ class Itf1Proxy final : public Itf1ProxyInterface {
   }
 
   ~Itf1Proxy() override {
+    bus_->RemoveObjectProxy(
+        service_name_, object_path_, base::Bind(&base::DoNothing));
   }
 
   void RegisterCloserSignalHandler(
@@ -720,6 +730,8 @@ class Itf2Proxy final : public Itf2ProxyInterface {
   }
 
   ~Itf2Proxy() override {
+    bus_->RemoveObjectProxy(
+        service_name_, object_path_, base::Bind(&base::DoNothing));
   }
 
   void ReleaseObjectProxy(const base::Closure& callback) {
@@ -993,6 +1005,8 @@ class Itf1Proxy final : public Itf1ProxyInterface {
   }
 
   ~Itf1Proxy() override {
+    bus_->RemoveObjectProxy(
+        service_name_, object_path_, base::Bind(&base::DoNothing));
   }
 
   void RegisterCloserSignalHandler(
@@ -1070,6 +1084,8 @@ class Itf2Proxy final : public Itf2ProxyInterface {
   }
 
   ~Itf2Proxy() override {
+    bus_->RemoveObjectProxy(
+        service_name_, object_path_, base::Bind(&base::DoNothing));
   }
 
   void ReleaseObjectProxy(const base::Closure& callback) {
