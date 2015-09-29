@@ -13,7 +13,6 @@
 # limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
-ifeq ($(HOST_OS),linux)
 
 libdbusBindingGenCFlags := -Wno-unused-parameter
 
@@ -72,5 +71,3 @@ LOCAL_SRC_FILES := \
     chromeos-dbus-bindings/testrunner.cc \
     chromeos-dbus-bindings/xml_interface_parser_unittest.cc
 include $(BUILD_HOST_NATIVE_TEST)
-
-endif  # ifeq ($(HOST_OS),linux)
