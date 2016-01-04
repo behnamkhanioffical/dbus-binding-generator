@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-libdbusBindingGenCFlags := -Wno-unused-parameter
+libdbusBindingGenCFlags := -Wall -Werror
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libdbus-binding-gen-host
